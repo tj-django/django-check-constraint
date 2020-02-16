@@ -11,6 +11,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Misc
 - "2020-02-16 09:46 - Increased django-check-constraint version:VERSION = (1, 0, 0) to VERSION = (2, 0, 0)" ([5f93d15](https://github.com/jackton1/django-check-constraint/commit/5f93d15c90897bf585d09219abcab48ee9e9029b)).
+- "2020-02-16 09:49 - Increased django-check-constraint version:VERSION = (1, 0, 0) to VERSION = (1, 0, 1)" ([b7321ab](https://github.com/jackton1/django-check-constraint/commit/b7321ab755cd3031e62b5efc7f6173a1708d9ebe)).
+- Updated bumpversion. ([296f6c9](https://github.com/jackton1/django-check-constraint/commit/296f6c997f7830c46632a50f8439da811419a34b)).
+- Updated CHANGELOG.md. ([cedca48](https://github.com/jackton1/django-check-constraint/commit/cedca48561b5c3d703ab0493f644013168633e50)).
 
 
 ## [v1.0.0](https://github.com/jackton1/django-check-constraint/releases/tag/v1.0.0) ([compare](https://github.com/jackton1/django-check-constraint/compare/9680ca615965753725da4287b4dbcc7d8dd16063...v1.0.0)) - 2020-02-16
