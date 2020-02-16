@@ -4,7 +4,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## [v1.1.0](https://github.com/jackton1/django-check-constraint/releases/tag/v1.1.0) ([compare](https://github.com/jackton1/django-check-constraint/compare/v1.0.3...v1.1.0))
+## [v1.0.5](https://github.com/jackton1/django-check-constraint/releases/tag/v1.0.5) ([compare](https://github.com/jackton1/django-check-constraint/compare/v1.0.4...v1.0.5))
+
+### Removed
+- Removed autoedit on ([8a5d4d6](https://github.com/jackton1/django-check-constraint/commit/8a5d4d68055e639d79af9fa66d88bf73a839ca35)).
+
+### Misc
+- "2020-02-16 18:09 - Increased django-check-constraint version:VERSION = (1, 0, 5) to VERSION = (1, 0, 6)" ([656f035](https://github.com/jackton1/django-check-constraint/commit/656f0355d97be7bd04900f3f0e85b2020ffeca45)).
+
+
+## [v1.0.4](https://github.com/jackton1/django-check-constraint/releases/tag/v1.0.4) ([compare](https://github.com/jackton1/django-check-constraint/compare/v1.0.3...v1.0.4)) - 2020-02-16
 
 ### Added
 - Added the release workflow. ([e844bd9](https://github.com/jackton1/django-check-constraint/commit/e844bd917c6a3517e9e77432cda29b0d6ff906a8)).
@@ -13,6 +22,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Fixed release script. ([f8d4062](https://github.com/jackton1/django-check-constraint/commit/f8d4062f40bed4aecd209576277fb8326d25cab1)).
 - Fixed release script. ([ce9aeca](https://github.com/jackton1/django-check-constraint/commit/ce9aeca9a87bd29f0bcd22a8abca9c99546329c6)).
 - Fixed release target. ([8bc7f03](https://github.com/jackton1/django-check-constraint/commit/8bc7f0363105c42224242926f3578b4ac9e21efb)).
+- Fixed script. ([6ce55e7](https://github.com/jackton1/django-check-constraint/commit/6ce55e71e6af6932dc78589a8b9e59a1847a43ac)).
 - Fixed script. ([38c9264](https://github.com/jackton1/django-check-constraint/commit/38c9264620f351087ec486344afd20460afe6d81)).
 - Fixed script. ([36da8f7](https://github.com/jackton1/django-check-constraint/commit/36da8f7e842ea06d8be8c0bce3cc14368895ef87)).
 - Fixed script. ([87c392c](https://github.com/jackton1/django-check-constraint/commit/87c392c5741db1ee016ac5f62b461745a3a97f73)).
@@ -37,12 +47,18 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Update README.md ([99934e0](https://github.com/jackton1/django-check-constraint/commit/99934e080fb1af0bce48445941bb8ce61a5825e8)).
 - Update script ([51194cc](https://github.com/jackton1/django-check-constraint/commit/51194cc29ac1f5187eba2fd9e15752a613edc200)).
 - Update script ([4a9a57a](https://github.com/jackton1/django-check-constraint/commit/4a9a57a9b56176dfe9f7d6ad82802431ea6c4d36)).
+- Updated CHANGELOG.md. ([b03ede1](https://github.com/jackton1/django-check-constraint/commit/b03ede145efb1fb471f241ea495fc4c6a935a4c4)).
 - Updated CHANGELOG.md. ([c532485](https://github.com/jackton1/django-check-constraint/commit/c532485cdec07e10c10f62f2cb7afe7a778ec671)).
 - Updated CHANGELOG.md. ([d60c7b4](https://github.com/jackton1/django-check-constraint/commit/d60c7b4173b13cd469d2393f1d87e5de905eb9c9)).
 - Updated CHANGELOG.md. ([420f428](https://github.com/jackton1/django-check-constraint/commit/420f4285478fc01b1f85637a21d707613ac46f3a)).
 - Updated CHANGELOG.md. ([d1b9920](https://github.com/jackton1/django-check-constraint/commit/d1b9920bd6b15d05d79d3df0b680fcd24f755783)).
 - Updated CHANGELOG.md. ([2469605](https://github.com/jackton1/django-check-constraint/commit/246960587a776a34687784ebf6a92c2c62dc27ba)).
 - Updated CHANGELOG.md. ([eb53457](https://github.com/jackton1/django-check-constraint/commit/eb534576e939ebeca5e0931286a406f61a608ade)).
+- updated command. ([043078b](https://github.com/jackton1/django-check-constraint/commit/043078b1f8935e32dd725876f3e2cbedb37e8b8d)).
+- updated command. ([2cccb9d](https://github.com/jackton1/django-check-constraint/commit/2cccb9d106f6aabb0d3f3a259553af0ccbf1b08b)).
+- updated command. ([2ecbc81](https://github.com/jackton1/django-check-constraint/commit/2ecbc81544b813fdc2e0f13d41fb6fea5f1f7eaa)).
+- updated command. ([7a2c520](https://github.com/jackton1/django-check-constraint/commit/7a2c52067ba0b6bcf5e91bae32be47f8292c15a5)).
+- updated command. ([be2193e](https://github.com/jackton1/django-check-constraint/commit/be2193eced3b1d644f1ec87f661e5e65267e2a44)).
 - Updated make targets. ([b63d762](https://github.com/jackton1/django-check-constraint/commit/b63d76254c42c77c4b350905c722b9c00714cadb)).
 - Updated Makefile ([c97229f](https://github.com/jackton1/django-check-constraint/commit/c97229fbed8dcaaed44feb37d16a9c19219d5fc7)).
 - Updated Makefile to include release trigger. ([024a2d6](https://github.com/jackton1/django-check-constraint/commit/024a2d62c256c13ca003e99fbfd7d4bd5b456a9e)).
