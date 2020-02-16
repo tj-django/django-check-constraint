@@ -62,7 +62,7 @@ tag-build:
 	@git tag v$(PACKAGE_VERSION)
 
 release-to-pypi:  ## Release project to pypi
-	@$(PYTHON_PIP) install -U twine
+	@$(PYTHON_PIP) install -U pip twine setuptools
 	@$(PYTHON) setup.py sdist bdist_wheel
 	@twine upload dist/*
 
