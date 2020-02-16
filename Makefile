@@ -77,7 +77,7 @@ release-to-pypi: clean-build guard-PART  ## Bump the project version (using the 
 	@git commit -am "Updated CHANGELOG.md."
 	@$(MAKE) start-release PACKAGE_VERSION=$(shell $(PYTHON) setup.py --version)
 
-start-release: increase-version setup.py
+start-release: setup.py
 	@echo "Creating release..."
 	@git flow release start "$(PACKAGE_VERSION)"
 	@git flow release finish "$(PACKAGE_VERSION)" -p -m "Upgraded to v$(PACKAGE_VERSION)"
