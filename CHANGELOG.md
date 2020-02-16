@@ -4,10 +4,28 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## [v1.0.3](https://github.com/jackton1/django-check-constraint/releases/tag/v1.0.3) ([compare](https://github.com/jackton1/django-check-constraint/compare/v1.0.2...v1.0.3))
+## [v1.0.4](https://github.com/jackton1/django-check-constraint/releases/tag/v1.0.4) ([compare](https://github.com/jackton1/django-check-constraint/compare/v1.0.3...v1.0.4))
+
+### Fixed
+- Fixed release script. ([ce9aeca](https://github.com/jackton1/django-check-constraint/commit/ce9aeca9a87bd29f0bcd22a8abca9c99546329c6)).
+- Fixed script. ([73b736f](https://github.com/jackton1/django-check-constraint/commit/73b736fe8a1ce0b4297ff43649656783d5c32f40)).
+
+### Misc
+- "2020-02-16 12:37 - Increased django-check-constraint version:VERSION = (1, 0, 3) to VERSION = (1, 0, 4)" ([2878581](https://github.com/jackton1/django-check-constraint/commit/2878581ec5a34e774bff0c6b7ed9e39e6017c004)).
+- Create pythonpublish.yml ([3615eb9](https://github.com/jackton1/django-check-constraint/commit/3615eb90b999c773f998540bc7859c80a10568d0)).
+- Update README.md ([99934e0](https://github.com/jackton1/django-check-constraint/commit/99934e080fb1af0bce48445941bb8ce61a5825e8)).
+- Updated Makefile to include release trigger. ([024a2d6](https://github.com/jackton1/django-check-constraint/commit/024a2d62c256c13ca003e99fbfd7d4bd5b456a9e)).
+- Updated script. ([3c9e2a2](https://github.com/jackton1/django-check-constraint/commit/3c9e2a2caa9096db561459d6471cdefab5145986)).
+- Updated the deploy to pypi pipeline. ([283e9f3](https://github.com/jackton1/django-check-constraint/commit/283e9f31ce41eb385679f2451871ba53b434a326)).
+- Updated the release script. ([f8c42b3](https://github.com/jackton1/django-check-constraint/commit/f8c42b31ad31c4b0037e3bb3c25895aac53d4811)).
+
+
+## [v1.0.3](https://github.com/jackton1/django-check-constraint/releases/tag/v1.0.3) ([compare](https://github.com/jackton1/django-check-constraint/compare/v1.0.2...v1.0.3)) - 2020-02-16
 
 ### Misc
 - "2020-02-16 10:21 - Increased django-check-constraint version:VERSION = (1, 0, 2) to VERSION = (1, 0, 3)" ([ac8659a](https://github.com/jackton1/django-check-constraint/commit/ac8659a09596acc32031cf95273b133a1afad314)).
+- Create LICENSE ([9098cb8](https://github.com/jackton1/django-check-constraint/commit/9098cb87b6cb8aa7bf72103db1019a96aeb2680b)).
+- Updated CHANGELOG.md. ([3a44872](https://github.com/jackton1/django-check-constraint/commit/3a44872dede80f87e63bda54e0e0a45f26bdbad7)).
 - Updated README. ([5dedfe6](https://github.com/jackton1/django-check-constraint/commit/5dedfe66bae49c325c897ecc9c0f3b21fedcfff6)).
 - Updated README. ([1906775](https://github.com/jackton1/django-check-constraint/commit/1906775bde33ba1215bc56960a8595448cd4618b)).
 - Updated README. ([54eb92d](https://github.com/jackton1/django-check-constraint/commit/54eb92d388b19573dd302254a7115c9476a02aa9)).
