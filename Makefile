@@ -50,16 +50,18 @@ install-dev: clean-build  ## Install development extra dependencies.
 	@echo "Installing development requirements..."
 	@$(PYTHON_PIP) install -e .'[development]' -r requirements.txt
 
+install-deploy:
+	@echo "Installing deploy extra requirements..."
+	@$(PYTHON_PIP) install -q -e .'[deploy]'
+
 update-requirements:  ## Updates the requirement.txt adding missing package dependencies
 	@echo "Syncing the package requirements.txt..."
 	@$(PIP_COMPILE)
 
 tag-build:
 	@git tag v$(PACKAGE_VERSION)
-	@git push --tags
-	@git push
 
-release-to-pypi: increase-version tag-build  ## Release project to pypi
+release-to-pypi: tag-build  ## Release project to pypi
 	@$(PYTHON_PIP) install -U twine
 	@$(PYTHON) setup.py sdist bdist_wheel
 	@twine upload dist/*
@@ -70,7 +72,6 @@ release-to-pypi: increase-version tag-build  ## Release project to pypi
 # ----------------------------------------------------------
 increase-version: clean-build guard-PART  ## Bump the project version (using the $PART env: defaults to 'patch').
 	@echo "Increasing project '$(PART)' version..."
-	@$(PYTHON_PIP) install -q -e .'[deploy]'
 	@bump2version --verbose $(PART)
 	@git-changelog . > CHANGELOG.md
 	@git commit -am "Updated CHANGELOG.md."
