@@ -75,7 +75,6 @@ increase-version: clean-build guard-PART  ## Bump the project version (using the
 	@bump2version --verbose $(PART)
 	@git-changelog . > CHANGELOG.md
 	@git commit -am "Updated CHANGELOG.md."
-	@git push
 
 release-to-pypi: increase-version setup.py
 	@echo "Creating release..."
