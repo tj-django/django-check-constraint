@@ -76,8 +76,8 @@ increase-version: clean-build guard-PART  ## Bump the project version (using the
 	@git-changelog . > CHANGELOG.md
 	@git commit -am "Updated CHANGELOG.md."
 
-trigger-release: guard-PART
-	@$(MAKE) increase-version
+trigger-release: guard-PART increase-version
+	@echo "Creating release..."
 	@git flow release start $(shell $(PYTHON) setup.py --version)
 	@git flow release finish  $(shell $(PYTHON) setup.py --version)
 	@git push
