@@ -84,6 +84,8 @@ start-release: setup.py
 	@git flow release start "$(PACKAGE_VERSION)"
 	@GIT_MERGE_AUTOEDIT=no git flow release finish -m "Upgraded to v$(strip $(PACKAGE_VERSION))" "$(strip $(PACKAGE_VERSION))"
 	@git push --tags
+	@git push origin develop
+	@git push origin master
 
 # ----------------------------------------------------------
 # --------- Run project Test -------------------------------
