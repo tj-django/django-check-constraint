@@ -69,7 +69,7 @@ release-to-pypi: increase-version tag-build  ## Release project to pypi
 increase-version: clean-build guard-PART  ## Bump the project version (using the $PART env: defaults to 'patch').
 	@echo "Increasing project '$(PART)' version..."
 	@$(PYTHON_PIP) install -q -e .'[deploy]'
-	@bumpversion --verbose $(PART)
+	@bump2version --verbose $(PART)
 	@git-changelog . > CHANGELOG.md
 	@git commit -am "Updated CHANGELOG.md."
 	@git push --tags
