@@ -32,6 +32,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: actions/cache@v1
+        id: cache
         if: startsWith(runner.os, 'Linux')
         with:
           path: ~/.cache/pip
@@ -40,6 +41,7 @@ jobs:
             ${{ runner.os }}-pip-
 
       - uses: actions/cache@v1
+        id: cache
         if: startsWith(runner.os, 'macOS')
         with:
           path: ~/Library/Caches/pip
@@ -48,6 +50,7 @@ jobs:
             ${{ runner.os }}-pip-
 
       - uses: actions/cache@v1
+        id: cache
         if: startsWith(runner.os, 'Windows')
         with:
           path: ~\AppData\Local\pip\Cache
@@ -59,6 +62,10 @@ jobs:
         uses: actions/setup-python@v1
         with:
           python-version: ${{ matrix.python-version }}
+
+      - name: Install dependencies
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: make install-test
 
       - name: Test with nox
         run: |
