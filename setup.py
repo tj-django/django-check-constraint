@@ -48,7 +48,7 @@ if os.path.isfile(README_PATH):
 else:
     LONG_DESCRIPTION = ""
 
-VERSION = (1, 0, 5)
+VERSION = (1, 0, 6)
 
 version = ".".join(map(str, VERSION))
 
