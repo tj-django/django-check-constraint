@@ -30,6 +30,7 @@ jobs:
         options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
 
     steps:
+      - uses: actions/checkout@v2
       - uses: actions/cache@v1
         if: startsWith(runner.os, 'Linux')
         with:
@@ -54,7 +55,6 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-pip-
 
-      - uses: actions/checkout@v2
       - name: Set up Python
         uses: actions/setup-python@v1
         with:
