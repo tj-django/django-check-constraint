@@ -1,4 +1,8 @@
 # django-check-constraint
+[![PyPI - License](https://img.shields.io/pypi/l/django-check-constraint.svg)](https://github.com/jackton1/django-check-constraint/blob/master/LICENSE)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/django-check-constraint.svg)](https://pypi.org/project/django-check-constraint)
+[![PyPI - Django Version](https://img.shields.io/pypi/djversions/django-check-constraint.svg)](https://docs.djangoproject.com/en/2.2/releases/)
+
 Complex check constraint support for Django.
 
 
@@ -94,7 +98,7 @@ class TestModel(models.Model):
                         )
                     ),
                 },
-                name='app_name_test_model_optional_field_provided',
+                name='%(app_label)s_%(class)s_optional_field_provided',
             ),
         ]
 
