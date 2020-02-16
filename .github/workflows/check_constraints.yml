@@ -30,21 +30,46 @@ jobs:
         options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Set up Python
-      uses: actions/setup-python@v1
-      with:
-        python-version: ${{ matrix.python-version }}
-    - name: Test with nox
-      run: |
-        sudo apt-get install -y --no-install-recommends libpq-dev mysql-client mysql-server libmysqlclient-dev
-        make nox
-      env:
-        # use postgres for the host here because we have specified a container for the job.
-        # If we were running the job on the VM this would be localhost
-        POSTGRES_HOST: postgres
-        POSTGRES_PORT: ${{ job.services.postgres.ports[5432] }}
-        POSTGRES_USER: test_user
-        POSTGRES_DB: test
-        MYSQL_ROOT_PASSWORD: password
-        MYSQL_PORT: ${{ job.services.mysql.ports['3306'] }}
+      - uses: actions/cache@v1
+        if: startsWith(runner.os, 'Linux')
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
+
+      - uses: actions/cache@v1
+        if: startsWith(runner.os, 'macOS')
+        with:
+          path: ~/Library/Caches/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
+
+      - uses: actions/cache@v1
+        if: startsWith(runner.os, 'Windows')
+        with:
+          path: ~\AppData\Local\pip\Cache
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
+
+      - uses: actions/checkout@v2
+      - name: Set up Python
+        uses: actions/setup-python@v1
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Test with nox
+        run: |
+          sudo apt-get install -y --no-install-recommends libpq-dev mysql-client mysql-server libmysqlclient-dev
+          make nox
+        env:
+          # use postgres for the host here because we have specified a container for the job.
+          # If we were running the job on the VM this would be localhost
+          POSTGRES_HOST: postgres
+          POSTGRES_PORT: ${{ job.services.postgres.ports[5432] }}
+          POSTGRES_USER: test_user
+          POSTGRES_DB: test
+          MYSQL_ROOT_PASSWORD: password
+          MYSQL_PORT: ${{ job.services.mysql.ports['3306'] }}
