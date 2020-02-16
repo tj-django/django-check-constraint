@@ -37,7 +37,7 @@ def tests(session, django, database):
             'CPPFLAGS': "-I/usr/local/opt/openssl@1.1/include"
         }
     )
-    session.install(f'django=={django}')
+    session.install('django=={}'.format(django))
     session.run('bash', '-c', 'make test', external=True, env={'ENV_DB': database})
 
 

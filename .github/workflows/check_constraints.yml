@@ -35,7 +35,7 @@ jobs:
       uses: actions/setup-python@v1
       with:
         python-version: ${{ matrix.python-version }}
-    - name: Test with tox
+    - name: Test with nox
       run: |
         sudo apt-get install -y --no-install-recommends libpq-dev
         make nox
