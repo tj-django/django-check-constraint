@@ -99,7 +99,7 @@ elif _ENV_DB == 'mysql':
         'NAME': 'root',
         'USER': 'root',
         'PASSWORD': os.environ.get('MYSQL_ROOT_PASSWORD', ''),
-        'PORT': '3306',
+        'PORT': os.environ.get('MYSQL_PORT', '3306'),
     }
 
 
