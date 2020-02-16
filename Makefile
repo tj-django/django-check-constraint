@@ -78,8 +78,8 @@ increase-version: clean-build guard-PART  ## Bump the project version (using the
 
 trigger-release: guard-PART increase-version
 	@echo "Creating release..."
-	@git flow release start $($(PYTHON) setup.py --version)
-	@git flow release finish  $($(PYTHON) setup.py --version)
+	@git flow release start $(shell $(PYTHON) setup.py --version)
+	@git flow release finish  $(shell $(PYTHON) setup.py --version)
 	@git push
 	@git push --tags
 
