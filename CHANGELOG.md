@@ -4,7 +4,20 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## [v1.0.4](https://github.com/jackton1/django-check-constraint/releases/tag/v1.0.4) ([compare](https://github.com/jackton1/django-check-constraint/compare/v1.0.3...v1.0.4))
+## [v1.1.0](https://github.com/jackton1/django-check-constraint/releases/tag/v1.1.0) ([compare](https://github.com/jackton1/django-check-constraint/compare/v1.0.4...v1.1.0))
+
+### Added
+- Added the release workflow. ([e844bd9](https://github.com/jackton1/django-check-constraint/commit/e844bd917c6a3517e9e77432cda29b0d6ff906a8)).
+
+### Misc
+- "2020-02-16 17:31 - Increased django-check-constraint version:VERSION = (1, 0, 4) to VERSION = (1, 0, 5)" ([ad1a344](https://github.com/jackton1/django-check-constraint/commit/ad1a344f22847ef64d42e29defc3981fd9e299f7)).
+- Update README.md ([54da74d](https://github.com/jackton1/django-check-constraint/commit/54da74d511c5a20ca79c5c9535fd4e2cd534a39e)).
+- Updated make targets. ([b63d762](https://github.com/jackton1/django-check-constraint/commit/b63d76254c42c77c4b350905c722b9c00714cadb)).
+- Updated Makefile ([c97229f](https://github.com/jackton1/django-check-constraint/commit/c97229fbed8dcaaed44feb37d16a9c19219d5fc7)).
+- Updated the release to pypi step. ([fef3a0e](https://github.com/jackton1/django-check-constraint/commit/fef3a0e8c4189452a589ca61ecbd80d94b64d19c)).
+
+
+## [v1.0.4](https://github.com/jackton1/django-check-constraint/releases/tag/v1.0.4) ([compare](https://github.com/jackton1/django-check-constraint/compare/v1.0.3...v1.0.4)) - 2020-02-16
 
 ### Fixed
 - Fixed release script. ([ce9aeca](https://github.com/jackton1/django-check-constraint/commit/ce9aeca9a87bd29f0bcd22a8abca9c99546329c6)).
@@ -14,6 +27,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - "2020-02-16 12:37 - Increased django-check-constraint version:VERSION = (1, 0, 3) to VERSION = (1, 0, 4)" ([2878581](https://github.com/jackton1/django-check-constraint/commit/2878581ec5a34e774bff0c6b7ed9e39e6017c004)).
 - Create pythonpublish.yml ([3615eb9](https://github.com/jackton1/django-check-constraint/commit/3615eb90b999c773f998540bc7859c80a10568d0)).
 - Update README.md ([99934e0](https://github.com/jackton1/django-check-constraint/commit/99934e080fb1af0bce48445941bb8ce61a5825e8)).
+- Update script ([51194cc](https://github.com/jackton1/django-check-constraint/commit/51194cc29ac1f5187eba2fd9e15752a613edc200)).
+- Update script ([4a9a57a](https://github.com/jackton1/django-check-constraint/commit/4a9a57a9b56176dfe9f7d6ad82802431ea6c4d36)).
+- Updated CHANGELOG.md. ([eb53457](https://github.com/jackton1/django-check-constraint/commit/eb534576e939ebeca5e0931286a406f61a608ade)).
 - Updated Makefile to include release trigger. ([024a2d6](https://github.com/jackton1/django-check-constraint/commit/024a2d62c256c13ca003e99fbfd7d4bd5b456a9e)).
 - Updated script. ([3c9e2a2](https://github.com/jackton1/django-check-constraint/commit/3c9e2a2caa9096db561459d6471cdefab5145986)).
 - Updated the deploy to pypi pipeline. ([283e9f3](https://github.com/jackton1/django-check-constraint/commit/283e9f31ce41eb385679f2451871ba53b434a326)).
