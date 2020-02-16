@@ -79,7 +79,7 @@ increase-version: clean-build guard-PART  ## Bump the project version (using the
 # --------- Run project Test -------------------------------
 # ----------------------------------------------------------
 nox: install-test  ## Run nox test
-	@nox --report status.json
+	@nox -x --report status.json
 
 clean-test-all: clean-build  ## Clean build and test assets.
 	@rm -rf .tox/
