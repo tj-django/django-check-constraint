@@ -10,13 +10,11 @@ class Books(models.Model):
 
 class Library(models.Model):
     name = models.CharField(max_length=255)
-    books = models.ManyToManyField(Books, through='LibraryBooks')
+    books = models.ManyToManyField(Books, through="LibraryBooks")
 
 
 class LibraryBooks(models.Model):
     library = models.ForeignKey(
-        Library,
-        on_delete=models.CASCADE,
-        related_name='library_books',
+        Library, on_delete=models.CASCADE, related_name="library_books"
     )
     books = models.ForeignKey(Books, on_delete=models.PROTECT)

@@ -48,5 +48,3 @@ jobs:
         POSTGRES_DB: test
         MYSQL_ROOT_PASSWORD: password
         MYSQL_PORT: ${{ job.services.mysql.ports['3306'] }}
-
-

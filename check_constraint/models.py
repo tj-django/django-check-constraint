@@ -25,7 +25,7 @@ class AnnotatedCheckConstraint(models.CheckConstraint):
 
     def deconstruct(self):
         path, args, kwargs = super(models.CheckConstraint, self).deconstruct()
-        kwargs['check'] = self.check
-        kwargs['annotations'] = self.annotations
+        kwargs["check"] = self.check
+        kwargs["annotations"] = self.annotations
 
         return path, args, kwargs
