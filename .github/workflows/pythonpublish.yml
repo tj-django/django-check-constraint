@@ -23,7 +23,7 @@ jobs:
       env:
         TWINE_USERNAME: ${{ secrets.PYPI_USERNAME }}
         TWINE_PASSWORD: ${{ secrets.PYPI_PASSWORD }}
-      run: make release-to-pypi
+      run: make upload-to-pypi
     - name: Push changes
       uses: ad-m/github-push-action@master
       with:
