@@ -7,6 +7,24 @@
 Extends [Django's Check](https://docs.djangoproject.com/en/3.0/ref/models/options/#constraints) constraint with support for annotations and calling db functions.
 
 
+#### Installation
+
+```bash
+$ pip install django-check-constraint
+```
+
+ADD `check_constraint` to list of *INSTALLED* *APPS*.
+
+```python
+INSTALLED_APPS = [
+  ...
+  "check_constraint",
+  ...
+]
+
+```
+
+
 #### Scenario:
 
 Suppose you have a database function that returns the counts of null values in `[i, ...n]`.
