@@ -38,7 +38,6 @@ jobs:
     - name: Test with nox
       run: |
         sudo apt-get install -y --no-install-recommends libpq-dev mysql-client mysql-server libmysqlclient-dev
-        mysql --host 127.0.0.1 --port ${{ job.services.mysql.ports['3306'] }} -uroot -ppassword -e "SHOW DATABASES"
         make nox
       env:
         # use postgres for the host here because we have specified a container for the job.
