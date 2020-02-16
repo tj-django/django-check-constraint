@@ -2,7 +2,7 @@
 Complex check constraint support for Django.
 
 
-Scenario:
+#### Scenario:
 
 Suppose you have a database function that returns the counts of null values in `[i, ...n]`.
 
@@ -15,12 +15,12 @@ CREATE OR REPLACE FUNCTION public.non_null_count(VARIADIC arg_array ANYARRAY)
 
 ```
 
-Example:
+#### Example:
 ```postgresql
 SELECT public.non_null_count(1, null, null);
 ```
 
-Outputs:
+#### Outputs:
 
 ```sql
 non_null_count
