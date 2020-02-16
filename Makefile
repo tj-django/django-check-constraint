@@ -83,7 +83,7 @@ start-release: increase-version setup.py
 	@$(MAKE) finish-release PACKAGE_VERSION=$(PACKAGE_VERSION)
 
 finish-release:
-	@git flow release finish -p -m "Upgraded to v$(strip $(PACKAGE_VERSION))" "$(strip $(PACKAGE_VERSION))"
+	@git flow release finish -m "Upgraded to v$(strip $(PACKAGE_VERSION))" "$(strip $(PACKAGE_VERSION))"
 	@git push --tags
 
 # ----------------------------------------------------------
