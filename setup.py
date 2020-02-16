@@ -67,13 +67,10 @@ setup(
     license="MIT/Apache-2.0",
     keywords=[
         "django",
-        "django-clone",
-        "django clone",
-        "django object clone",
-        "clone-django",
-        "model cloning",
-        "django instance duplication",
-        "django duplication",
+        "django-check-constraint",
+        "django check constraint",
+        "check constraint-django",
+        "model constraints",
     ],
     classifiers=[
         "Development Status :: 3 - Alpha",
