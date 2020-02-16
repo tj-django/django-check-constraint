@@ -78,8 +78,8 @@ increase-version: clean-build guard-PART  ## Bump the project version (using the
 
 release-to-pypi: increase-version setup.py
 	@echo "Creating release..."
-	@git flow release start $(shell $(PYTHON) setup.py --version)
-	@git flow release finish $(shell $(PYTHON) setup.py --version) -m "Upgraded to v$(shell $(PYTHON) setup.py --version)"
+	@git flow release start "$(shell $(PYTHON) setup.py --version)"
+	@git flow release finish -m "Upgraded to v$(shell $(PYTHON) setup.py --version)" "$(shell $(PYTHON) setup.py --version)"
 	@git push --tags
 	@git push
 
