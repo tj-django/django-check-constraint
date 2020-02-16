@@ -37,7 +37,7 @@ jobs:
         python-version: ${{ matrix.python-version }}
     - name: Test with nox
       run: |
-        sudo apt-get install -y --no-install-recommends libpq-dev mysql-client
+        sudo apt-get install -y --no-install-recommends libpq-dev mysql-client mysql-server libmysqlclient-dev
         make nox
       env:
         # use postgres for the host here because we have specified a container for the job.
