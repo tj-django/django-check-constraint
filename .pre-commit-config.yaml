@@ -4,6 +4,12 @@ repos:
     hooks:
     -   id: check-yaml
     -   id: end-of-file-fixer
+        exclude: >
+            (?x)^(
+              CHANGELOG.md|
+              setup.py|
+              .bumpversion.cfg
+            )$
     -   id: trailing-whitespace
 -   repo: https://github.com/psf/black
     rev: 19.10b0
