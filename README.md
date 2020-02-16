@@ -4,7 +4,7 @@
 [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/django-check-constraint.svg)](https://pypi.org/project/django-check-constraint)
 [![PyPI - Django Version](https://img.shields.io/pypi/djversions/django-check-constraint.svg)](https://docs.djangoproject.com/en/2.2/releases/)
 
-Complex check constraint support for Django.
+Extends [Django's Check](https://docs.djangoproject.com/en/3.0/ref/models/options/#constraints) constraint to include annotations and function references.
 
 
 #### Scenario:
