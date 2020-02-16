@@ -80,7 +80,10 @@ release-to-pypi: clean-build guard-PART  ## Bump the project version (using the 
 start-release: setup.py
 	@echo "Creating release..."
 	@git flow release start "$(PACKAGE_VERSION)"
-	@git flow release finish "$(PACKAGE_VERSION)" -p -m "Upgraded to v$(PACKAGE_VERSION)"
+	@$(MAKE) finish-release PACKAGE_VERSION=$(PACKAGE_VERSION)
+
+finish-release:
+	@git flow release finish -m "Upgraded to v$(strip $(PACKAGE_VERSION))" "$(strip $(PACKAGE_VERSION))"
 	@git push --tags
 
 # ----------------------------------------------------------
