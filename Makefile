@@ -56,6 +56,8 @@ update-requirements:  ## Updates the requirement.txt adding missing package depe
 
 tag-build:
 	@git tag v$(PACKAGE_VERSION)
+	@git push --tags
+	@git push
 
 release-to-pypi: increase-version tag-build  ## Release project to pypi
 	@$(PYTHON_PIP) install -U twine
@@ -72,8 +74,6 @@ increase-version: clean-build guard-PART  ## Bump the project version (using the
 	@bump2version --verbose $(PART)
 	@git-changelog . > CHANGELOG.md
 	@git commit -am "Updated CHANGELOG.md."
-	@git push --tags
-	@git push
 
 # ----------------------------------------------------------
 # --------- Run project Test -------------------------------
