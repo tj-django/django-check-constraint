@@ -8,7 +8,7 @@ MANAGE_PY 		:= $(PYTHON) manage.py
 PYTHON_PIP  	:= /usr/bin/env pip
 PIP_COMPILE 	:= /usr/bin/env pip-compile
 PART 			:= patch
-PACKAGE_VERSION = $(shell $(PYTHON) setup.py --version)
+PACKAGE_VERSION := $(shell $(PYTHON) setup.py --version)
 
 # Put it first so that "make" without argument is like "make help".
 help:
@@ -70,18 +70,18 @@ upload-to-pypi:  ## Release project to pypi
 # ----------------------------------------------------------
 # ---------- Upgrade project version (bumpversion)  --------
 # ----------------------------------------------------------
-increase-version: clean-build guard-PART  ## Bump the project version (using the $PART env: defaults to 'patch').
+release-to-pypi: clean-build guard-PART  ## Bump the project version (using the $PART env: defaults to 'patch').
 	@echo "Increasing project '$(PART)' version..."
 	@bump2version --verbose $(PART)
 	@git-changelog . > CHANGELOG.md
 	@git commit -am "Updated CHANGELOG.md."
+	@$(MAKE) start-release PACKAGE_VERSION=$(shell $(PYTHON) setup.py --version)
 
-release-to-pypi: increase-version setup.py
+start-release: increase-version setup.py
 	@echo "Creating release..."
-	@git flow release start "$(shell $(PYTHON) setup.py --version)"
-	@git flow release finish -m "Upgraded to v$(shell $(PYTHON) setup.py --version)" "$(shell $(PYTHON) setup.py --version)"
+	@git flow release start "$(PACKAGE_VERSION)"
+	@git flow release finish -p -m "Upgraded to v$(PACKAGE_VERSION)" "'$(PACKAGE_VERSION)'"
 	@git push --tags
-	@git push
 
 # ----------------------------------------------------------
 # --------- Run project Test -------------------------------
