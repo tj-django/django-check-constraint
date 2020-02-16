@@ -25,7 +25,6 @@ def tests(session, django, database):
         session.skip("Skipping {} and {}".format(session.python, django))
 
     session.install(
-        "--no-cache-dir",
         *DB_PACKAGE[database][session.python],
         env={
             "LDFLAGS": "-L/usr/local/opt/openssl@1.1/lib",
