@@ -75,14 +75,12 @@ release-to-pypi: clean-build guard-PART  ## Bump the project version (using the 
 	@bump2version --verbose $(PART)
 	@git-changelog . > CHANGELOG.md
 	@git commit -am "Updated CHANGELOG.md."
-	@$(MAKE) start-release PACKAGE_VERSION=$(shell $(PYTHON) setup.py --version)
+	@$(MAKE) start-release
 
 start-release: setup.py
 	@echo "Creating release..."
+	@eval PACKAGE_VERSION=$(shell $(PYTHON) setup.py --version)
 	@git flow release start "$(PACKAGE_VERSION)"
-	@$(MAKE) finish-release PACKAGE_VERSION=$(PACKAGE_VERSION)
-
-finish-release:
 	@GIT_MERGE_AUTOEDIT=no git flow release finish -m "Upgraded to v$(strip $(PACKAGE_VERSION))" "$(strip $(PACKAGE_VERSION))"
 	@git push --tags
 
