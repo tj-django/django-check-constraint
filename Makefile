@@ -61,7 +61,7 @@ update-requirements:  ## Updates the requirement.txt adding missing package depe
 tag-build:
 	@git tag v$(PACKAGE_VERSION)
 
-release-to-pypi: tag-build  ## Release project to pypi
+release-to-pypi:  ## Release project to pypi
 	@$(PYTHON_PIP) install -U twine
 	@$(PYTHON) setup.py sdist bdist_wheel
 	@twine upload dist/*
@@ -75,13 +75,14 @@ increase-version: clean-build guard-PART  ## Bump the project version (using the
 	@bump2version --verbose $(PART)
 	@git-changelog . > CHANGELOG.md
 	@git commit -am "Updated CHANGELOG.md."
+	@git push
 
-trigger-release: guard-PART increase-version
+trigger-release: increase-version setup.py
 	@echo "Creating release..."
 	@git flow release start $(shell $(PYTHON) setup.py --version)
-	@git flow release finish  $(shell $(PYTHON) setup.py --version)
-	@git push
+	@git flow release finish $(shell $(PYTHON) setup.py --version)
 	@git push --tags
+	@git push
 
 # ----------------------------------------------------------
 # --------- Run project Test -------------------------------
