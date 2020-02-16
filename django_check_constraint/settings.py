@@ -90,7 +90,7 @@ if  _ENV_DB == 'postgres':
         'USER': os.environ.get('POSTGRES_USER', 'postgres'),
         'PASSWORD': os.environ.get('POSTGRES_PASSWORD', ''),
         'HOST': 'localhost',
-        'PORT': '5432',
+        'PORT': os.environ.get('POSTGRES_PORT', '5432'),
     }
 elif _ENV_DB == 'mysql':
     DATABASES['mysql'] = {
