@@ -76,6 +76,13 @@ increase-version: clean-build guard-PART  ## Bump the project version (using the
 	@git-changelog . > CHANGELOG.md
 	@git commit -am "Updated CHANGELOG.md."
 
+trigger-release: guard-PART
+	@git flow release start v$(PACKAGE_VERSION)
+	@$(MAKE) increase-version
+	@git flow release finish
+	@git push
+	@git push --tags
+
 # ----------------------------------------------------------
 # --------- Run project Test -------------------------------
 # ----------------------------------------------------------
