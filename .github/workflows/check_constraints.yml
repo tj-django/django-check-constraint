@@ -64,8 +64,7 @@ jobs:
           python-version: ${{ matrix.python-version }}
 
       - name: Install dependencies
-        if: steps.Linux.outputs.cache-hit != 'true' && steps.Windows-cache.outputs.cache-hit != 'true'
-          && steps.macOS-cache.outputs.cache-hit != 'true'
+        if: steps.${{ runner.os }}.outputs.cache-hit != 'true'
         run: make install-test
 
       - name: Test with nox
