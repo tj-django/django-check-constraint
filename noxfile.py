@@ -25,6 +25,9 @@ DB_PACKAGE = {
 )
 @nox.parametrize('database', ['postgres', 'mysql'])
 def tests(session, django, database):
+    if django.split('.')[0] == '3' and session.python == '3.5':
+        session.skip('Skipping {} and {}'.format(session.python, django))
+
     session.install(
         '--no-cache-dir',
         *DB_PACKAGE[database][session.python],
