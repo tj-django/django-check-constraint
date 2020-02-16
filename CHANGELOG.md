@@ -4,7 +4,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## [v1.1.0](https://github.com/jackton1/django-check-constraint/releases/tag/v1.1.0) ([compare](https://github.com/jackton1/django-check-constraint/compare/v1.0.5...v1.1.0))
+## [v1.1.0](https://github.com/jackton1/django-check-constraint/releases/tag/v1.1.0) ([compare](https://github.com/jackton1/django-check-constraint/compare/v1.0.7...v1.1.0))
+
+### Added
+- Added a Personal Access token. ([3c45544](https://github.com/jackton1/django-check-constraint/commit/3c45544da73e05acc5c67f42009b3ab6aec9c078)).
+- Added push to origins. ([ece5d2d](https://github.com/jackton1/django-check-constraint/commit/ece5d2d14699e6cd5de3605149920f160ecb33ec)).
+
+### Misc
+- "2020-02-16 18:38 - Increased django-check-constraint version:VERSION = (1, 0, 7) to VERSION = (1, 0, 8)" ([8fb4427](https://github.com/jackton1/django-check-constraint/commit/8fb442714709cfcc18cec3f6a79503e55fbdd5c1)).
+- Updated the types. ([3e0baa5](https://github.com/jackton1/django-check-constraint/commit/3e0baa560fd66e6ed2b475e8fb9d9cdaef0213b7)).
+
+
+## [v1.0.7](https://github.com/jackton1/django-check-constraint/releases/tag/v1.0.7) ([compare](https://github.com/jackton1/django-check-constraint/compare/v1.0.5...v1.0.7)) - 2020-02-16
 
 ### Added
 - Added echo command. ([cba6c42](https://github.com/jackton1/django-check-constraint/commit/cba6c42dbc1f3390a3e295495a1b71a57591cbe4)).
@@ -12,6 +23,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Misc
 - "2020-02-16 18:18 - Increased django-check-constraint version:VERSION = (1, 0, 6) to VERSION = (1, 0, 7)" ([8def0ec](https://github.com/jackton1/django-check-constraint/commit/8def0ecf1f8e805f8beb6482d7a0934162ab566f)).
 - Cleaned Makefile. ([408e183](https://github.com/jackton1/django-check-constraint/commit/408e1833941be12d6123b5cd49783d18dea9fa90)).
+- Updated CHANGELOG.md. ([3dc1f62](https://github.com/jackton1/django-check-constraint/commit/3dc1f62a28dd2f63798c2190eb5ff2e9529ece5b)).
 
 
 ## [v1.0.5](https://github.com/jackton1/django-check-constraint/releases/tag/v1.0.5) ([compare](https://github.com/jackton1/django-check-constraint/compare/v1.0.4...v1.0.5)) - 2020-02-16
