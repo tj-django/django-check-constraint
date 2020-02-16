@@ -22,7 +22,7 @@ DB_PACKAGE = {
 @nox.parametrize("database", ["postgres", "mysql"])
 def tests(session, django, database):
     if django.split(".")[0] == "3" and session.python == "3.5":
-        session.skip("Skipping {} and {}".format(session.python, django))
+        session.skip("Python: {} and django: {}".format(session.python, django))
 
     session.install(
         *DB_PACKAGE[database][session.python],
