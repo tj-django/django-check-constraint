@@ -63,7 +63,7 @@ setup(
     author_email="jtonye@ymail.com",
     maintainer="Tonye Jack",
     maintainer_email="jtonye@ymail.com",
-    url="https://github.com/jackton1/django-clone.git",
+    url="https://github.com/jackton1/django-check-constraint",
     license="MIT/Apache-2.0",
     keywords=[
         "django",
