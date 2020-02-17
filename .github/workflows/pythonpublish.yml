@@ -2,7 +2,7 @@ name: Upload Python Package
 
 on:
   release:
-    types: [created, published]
+    types: [created]
 
 jobs:
   deploy:
@@ -28,4 +28,4 @@ jobs:
       uses: ad-m/github-push-action@master
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        tags: true
+        tags: false
