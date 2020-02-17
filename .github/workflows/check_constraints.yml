@@ -59,6 +59,33 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-pip-
 
+      - uses: actions/cache@v1
+        id: Linux-nox-cache
+        if: startsWith(runner.os, 'Linux')
+        with:
+          path: .nox
+          key: ${{ runner.os }}-nox-${{ hashFiles('noxfile.py') }}
+          restore-keys: |
+            ${{ runner.os }}-nox-
+
+      - uses: actions/cache@v1
+        id: macOS-nox-cache
+        if: startsWith(runner.os, 'macOS')
+        with:
+          path: .nox
+          key: ${{ runner.os }}-nox-${{ hashFiles('noxfile.py') }}
+          restore-keys: |
+            ${{ runner.os }}-nox-
+
+      - uses: actions/cache@v1
+        id: Windows-nox-cache
+        if: startsWith(runner.os, 'Windows')
+        with:
+          path: .nox
+          key: ${{ runner.os }}-nox-${{ hashFiles('noxfile.py') }}
+          restore-keys: |
+            ${{ runner.os }}-nox-
+
       - name: Set up Python
         uses: actions/setup-python@v1
         with:
