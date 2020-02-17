@@ -4,7 +4,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## [v1.1.0](https://github.com/jackton1/django-check-constraint/releases/tag/v1.1.0) ([compare](https://github.com/jackton1/django-check-constraint/compare/v1.0.7...v1.1.0))
+## [v1.0.9](https://github.com/jackton1/django-check-constraint/releases/tag/v1.0.9) ([compare](https://github.com/jackton1/django-check-constraint/compare/v1.0.8...v1.0.9))
+
+### Removed
+- Removed unused matrix ([23a05b7](https://github.com/jackton1/django-check-constraint/commit/23a05b7bb72e83b09c48e4af55a8f5287fd81c27)).
+
+### Misc
+- "2020-02-16 19:34 - Increased django-check-constraint version:VERSION = (1, 0, 8) to VERSION = (1, 0, 9)" ([846e90c](https://github.com/jackton1/django-check-constraint/commit/846e90cb2a578b7af408d367cff926d5fb6c9028)).
+- Updated tags. ([90eb71a](https://github.com/jackton1/django-check-constraint/commit/90eb71a6f37f0502846a7b0dc9ae865506e1a57b)).
+
+
+## [v1.0.8](https://github.com/jackton1/django-check-constraint/releases/tag/v1.0.8) ([compare](https://github.com/jackton1/django-check-constraint/compare/v1.0.7...v1.0.8)) - 2020-02-16
 
 ### Added
 - Added a Personal Access token. ([3c45544](https://github.com/jackton1/django-check-constraint/commit/3c45544da73e05acc5c67f42009b3ab6aec9c078)).
@@ -12,6 +22,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Misc
 - "2020-02-16 18:38 - Increased django-check-constraint version:VERSION = (1, 0, 7) to VERSION = (1, 0, 8)" ([8fb4427](https://github.com/jackton1/django-check-constraint/commit/8fb442714709cfcc18cec3f6a79503e55fbdd5c1)).
+- Updated CHANGELOG.md. ([48c6db7](https://github.com/jackton1/django-check-constraint/commit/48c6db76d18fbccf7d00167cb60c953a41cc330f)).
 - Updated the types. ([3e0baa5](https://github.com/jackton1/django-check-constraint/commit/3e0baa560fd66e6ed2b475e8fb9d9cdaef0213b7)).
 
 
