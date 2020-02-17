@@ -92,7 +92,7 @@ start-release: setup.py
 # ----------------------------------------------------------
 nox:  ## Run nox test
 	@echo "Running nox..."
-	@nox -x --report status.json
+	@nox -r -x --report status.json
 
 clean-test-all: clean-build  ## Clean build and test assets.
 	@rm -rf .tox/
