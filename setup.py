@@ -3,7 +3,7 @@ import io
 
 from setuptools import find_packages, setup
 
-install_requires = ["Django>=2.2.10"]
+install_requires = ["Django>=2.2.10,<4.0.0"]
 
 test_requires = [
     "nox==2019.11.9",

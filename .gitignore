@@ -4,3 +4,5 @@ build/
 dist/
 __pycache__/
 .nox/
+*.sqlite3
+status.json
