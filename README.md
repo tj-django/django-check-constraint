@@ -1,5 +1,6 @@
 # django-check-constraint
 ![django check constraint test.](https://github.com/jackton1/django-check-constraint/workflows/django%20check%20constraint%20test./badge.svg?branch=master)
+[![PyPI version](https://badge.fury.io/py/django-check-constraint.svg)](https://badge.fury.io/py/django-check-constraint)
 [![PyPI - License](https://img.shields.io/pypi/l/django-check-constraint.svg)](https://github.com/jackton1/django-check-constraint/blob/master/LICENSE)
 [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/django-check-constraint.svg)](https://pypi.org/project/django-check-constraint)
 [![PyPI - Django Version](https://img.shields.io/pypi/djversions/django-check-constraint.svg)](https://docs.djangoproject.com/en/2.2/releases/)
