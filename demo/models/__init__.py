@@ -1,2 +1,2 @@
-from demo.models.book import Book
-from demo.models.library import Library
+from demo.models.book import Book  # noqa
+from demo.models.library import Library  # noqa

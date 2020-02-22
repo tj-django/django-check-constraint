@@ -32,7 +32,7 @@ def tests(session, django, database):
         }
     )
     session.install("django=={}".format(django))
-    session.run("bash", "-c", "make test", external=True, env={"ENV_DB": database})
+    session.run("bash", "-c", "make test", env={"ENV_DB": database})
 
 
 @nox.session

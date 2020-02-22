@@ -80,7 +80,7 @@ DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.sqlite3",
         "NAME": os.path.join(BASE_DIR, "db.sqlite3"),
-        "TEST": {"DEPENDENCIES": TEST_ENV_DB,},
+        "TEST": {"DEPENDENCIES": TEST_ENV_DB},
     }
 }
 
@@ -93,7 +93,7 @@ if "postgres" in TEST_ENV_DB:
         "PASSWORD": os.environ.get("POSTGRES_PASSWORD", ""),
         "HOST": "localhost",
         "PORT": os.environ.get("POSTGRES_PORT", "5432"),
-        "TEST": {"DEPENDENCIES": [],},
+        "TEST": {"DEPENDENCIES": []},
     }
 
 if "mysql" in TEST_ENV_DB:
@@ -104,7 +104,7 @@ if "mysql" in TEST_ENV_DB:
         "USER": "root",
         "PASSWORD": os.environ.get("MYSQL_ROOT_PASSWORD", ""),
         "PORT": os.environ.get("MYSQL_PORT", "3306"),
-        "TEST": {"DEPENDENCIES": [],},
+        "TEST": {"DEPENDENCIES": []},
     }
 
 
