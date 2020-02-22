@@ -8,7 +8,8 @@
 ![Create New Release](https://github.com/jackton1/django-check-constraint/workflows/Create%20New%20Release/badge.svg)
 
 
-Extends [Django's Check](https://docs.djangoproject.com/en/3.0/ref/models/options/#constraints) constraint with support for annotations and calling db functions.
+Extends [Django's Check](https://docs.djangoproject.com/en/3.0/ref/models/options/#constraints)
+constraint with support for UDF(User defined functions/db functions) and annotations.
 
 
 #### Installation
@@ -58,7 +59,7 @@ non_null_count
 
 Defining a check constraint with this function
 
-The equivalent of
+The equivalent of (PostgresSQL)
 
 ```postgresql
 ALTER TABLE app_name_test_modoel ADD CONSTRAINT app_name_test_model_optional_field_provided
@@ -132,4 +133,5 @@ TODO's
 ------
 
 - [ ] Add support for schema based functions.
+- [ ] Add warning about mysql lack of user defined check constraint support.
 - [ ] Remove skipped sqlite3 test.

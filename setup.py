@@ -3,7 +3,7 @@ import io
 
 from setuptools import find_packages, setup
 
-install_requires = ["Django>=2.2.10"]
+install_requires = ["Django>=2.2.10,<4.0.0"]
 
 test_requires = [
     "nox==2019.11.9",
@@ -28,7 +28,12 @@ lint_requires = [
     "pre-commit==2.0.1",
 ]
 
-local_dev_requires = ["pip-tools==4.4.1", "check-manifest==0.37"]
+local_dev_requires = [
+    "pip-tools==4.4.1",
+    "check-manifest==0.37",
+    "psycopg2>=2.5.4",
+    "mysqlclient>=1.3.13",
+]
 
 extras_require = {
     "development": [local_dev_requires, install_requires, test_requires, lint_requires],

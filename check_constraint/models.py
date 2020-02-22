@@ -5,8 +5,8 @@ from django.db.models.sql import Query
 
 class AnnotatedCheckConstraint(models.CheckConstraint):
     def __init__(self, *args, annotations=None, **kwargs):
-        super().__init__(*args, **kwargs)
         self.annotations = annotations or {}
+        super(AnnotatedCheckConstraint, self).__init__(*args, **kwargs)
 
     def _get_check_sql(self, model, schema_editor):
         query = Query(model=model)
