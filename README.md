@@ -134,3 +134,4 @@ TODO's
 
 - [ ] Add support for schema based functions.
 - [ ] Add warning about mysql lack of user defined check constraint support.
+- [ ] Remove skipped sqlite3 test.
