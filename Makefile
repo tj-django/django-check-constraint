@@ -70,7 +70,7 @@ upload-to-pypi:  ## Release project to pypi
 # ----------------------------------------------------------
 # ---------- Upgrade project version (bumpversion)  --------
 # ----------------------------------------------------------
-release-to-pypi: clean-build guard-PART  ## Bump the project version (using the $PART env: defaults to 'patch').
+release-to-pypi: clean-build install-deploy guard-PART  ## Bump the project version (using the $PART env: defaults to 'patch').
 	@echo "Increasing project '$(PART)' version..."
 	@bump2version --verbose $(PART)
 	@git-changelog . > CHANGELOG.md
