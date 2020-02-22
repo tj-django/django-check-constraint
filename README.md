@@ -132,3 +132,4 @@ TODO's
 ------
 
 - [ ] Add support for schema based functions.
+- [ ] Remove skipped sqlite3 test.
