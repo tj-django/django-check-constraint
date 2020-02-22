@@ -3,7 +3,7 @@
 from django.db import migrations
 
 
-def non_null_count(values):
+def non_null_count(*values):
     none_values = [i for i in values if i == None]
 
     return len(none_values)

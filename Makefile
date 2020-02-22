@@ -32,7 +32,7 @@ clean-build: ## Clean project build artifacts.
 
 test:
 	@echo "Running `$(PYTHON_VERSION)` test..."
-	@$(MANAGE_PY) test --noinput --failfast
+	@$(MANAGE_PY) test -v 3 --noinput --failfast
 
 install: clean-build  ## Install project dependencies.
 	@echo "Installing project in dependencies..."

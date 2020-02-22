@@ -74,7 +74,7 @@ WSGI_APPLICATION = "django_check_constraint.wsgi.application"
 
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
-TEST_ENV_DB = os.environ.get("ENV_DB", "").split(",")
+TEST_ENV_DB = [] if "ENV_DB" not in os.environ else os.environ["ENV_DB"].split(",")
 
 DATABASES = {
     "default": {
@@ -84,6 +84,12 @@ DATABASES = {
     }
 }
 
+if "sqlite3" in TEST_ENV_DB:
+    DATABASES["sqlite3"] = {
+        "ENGINE": "django.db.backends.sqlite3",
+        "NAME": ":memory:",
+        "TEST": {"DEPENDENCIES": []},
+    }
 
 if "postgres" in TEST_ENV_DB:
     DATABASES["postgres"] = {

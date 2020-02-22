@@ -33,10 +33,14 @@ class Migration(migrations.Migration):
                 operation.state_forwards(self.app_label, project_state)
             return project_state
 
-        return super().apply(project_state, schema_editor, collect_sql=collect_sql)
+        return super(Migration, self).apply(
+            project_state, schema_editor, collect_sql=collect_sql
+        )
 
     def unapply(self, project_state, schema_editor, collect_sql=False):
         if schema_editor.connection.alias == "mysql":
             return project_state
 
-        return super().unapply(project_state, schema_editor, collect_sql=collect_sql)
+        return super(Migration, self).unapply(
+            project_state, schema_editor, collect_sql=collect_sql
+        )

@@ -6,3 +6,4 @@ __pycache__/
 .nox/
 *.sqlite3
 status.json
+.envrc
