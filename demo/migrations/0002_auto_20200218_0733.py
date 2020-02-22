@@ -38,8 +38,8 @@ DB_FUNCTIONS = {
         "forward": lambda conn, cursor: cursor.execute(
             """
             CREATE FUNCTION non_null_count (params JSON)
-                RETURNS BIGINT
-                NOT DETERMINISTIC
+                RETURNS INT
+                DETERMINISTIC
                 READS SQL DATA
             BEGIN
                 DECLARE n INT DEFAULT JSON_LENGTH(params);
@@ -56,11 +56,33 @@ DB_FUNCTIONS = {
                 END WHILE;
                 RETURN val;
             END;
+            CREATE TRIGGER demo_book_validate before INSERT ON demo_book
+            FOR each row
+            BEGIN
+                if non_null_count(JSON_ARRAY(new.amount_off, new.percentage)) = 0
+                THEN
+                    signal SQLSTATE '45000' SET message_text = 'Both amount_off and percentage cannot
+                    be null';
+                END if;
+            END;
+
+
+            CREATE TRIGGER demo_book_validate_2 before UPDATE ON demo_book
+            FOR each row
+            BEGIN
+                if non_null_count(JSON_ARRAY(new.amount_off, new.percentage)) = 0
+                THEN
+                    signal SQLSTATE '45000' SET message_text = 'Both amount_off and percentage cannot
+                    be null';
+                END if;
+            END;
         """
         ),
         "reverse": lambda conn, cursor: cursor.execute(
             """
             DROP FUNCTION non_null_count;
+            DROP TRIGGER demo_book_validate;
+            DROP TRIGGER demo_book_validate_2;
         """
         ),
     },

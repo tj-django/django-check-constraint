@@ -74,18 +74,18 @@ WSGI_APPLICATION = "django_check_constraint.wsgi.application"
 
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
+TEST_ENV_DB = os.environ.get("ENV_DB", "").split(",")
 
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.sqlite3",
         "NAME": os.path.join(BASE_DIR, "db.sqlite3"),
+        "TEST": {"DEPENDENCIES": TEST_ENV_DB,},
     }
 }
 
 
-_ENV_DB = os.environ.get("ENV_DB")
-
-if _ENV_DB == "postgres":
+if "postgres" in TEST_ENV_DB:
     DATABASES["postgres"] = {
         "ENGINE": "django.db.backends.postgresql",
         "NAME": os.environ.get("POSTGRES_DB", "test_postgres"),
@@ -93,8 +93,10 @@ if _ENV_DB == "postgres":
         "PASSWORD": os.environ.get("POSTGRES_PASSWORD", ""),
         "HOST": "localhost",
         "PORT": os.environ.get("POSTGRES_PORT", "5432"),
+        "TEST": {"DEPENDENCIES": [],},
     }
-elif _ENV_DB == "mysql":
+
+if "mysql" in TEST_ENV_DB:
     DATABASES["mysql"] = {
         "ENGINE": "django.db.backends.mysql",
         "HOST": "127.0.0.1",
@@ -102,6 +104,7 @@ elif _ENV_DB == "mysql":
         "USER": "root",
         "PASSWORD": os.environ.get("MYSQL_ROOT_PASSWORD", ""),
         "PORT": os.environ.get("MYSQL_PORT", "3306"),
+        "TEST": {"DEPENDENCIES": [],},
     }
 
 
