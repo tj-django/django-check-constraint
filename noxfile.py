@@ -25,6 +25,7 @@ def tests(session, django, database):
         session.skip("Python: {} and django: {}".format(session.python, django))
 
     if database == "sqlite3" and session.python not in ["3.8"]:
+        # TODO: Fix me for all python versions.
         session.skip("Python: {} and db: {}".format(session.python, database))
 
     if database != "sqlite3":
