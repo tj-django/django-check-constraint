@@ -24,6 +24,9 @@ def tests(session, django, database):
     if django.split(".")[0] == "3" and session.python == "3.5":
         session.skip("Python: {} and django: {}".format(session.python, django))
 
+    if database == "sqlite3" and session.python not in ["3.8"]:
+        session.skip("Python: {} and db: {}".format(session.python, database))
+
     if database != "sqlite3":
         session.install(
             *DB_PACKAGE[database][session.python],
