@@ -2,6 +2,8 @@ from django.db import models
 
 from django.db.models.sql import Query
 
+__all__ = ["AnnotatedCheckConstraint"]
+
 
 class AnnotatedCheckConstraint(models.CheckConstraint):
     def __init__(self, *args, annotations=None, **kwargs):
