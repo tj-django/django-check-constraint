@@ -4,13 +4,23 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## [v1.1.0](https://github.com/jackton1/django-check-constraint/releases/tag/v1.1.0) ([compare](https://github.com/jackton1/django-check-constraint/compare/v1.0.15...v1.1.0))
+## [v1.0.17](https://github.com/jackton1/django-check-constraint/releases/tag/v1.0.17) ([compare](https://github.com/jackton1/django-check-constraint/compare/v1.0.16...v1.0.17))
+
+### Fixed
+- Fixed * imports. ([4e73372](https://github.com/jackton1/django-check-constraint/commit/4e73372c0ededfdf81e397e855e5e4b63785a471)).
+
+### Misc
+- "2020-02-24 17:01 - Increased django-check-constraint version:VERSION = (1, 0, 16) to VERSION = (1, 0, 17)" ([0812de1](https://github.com/jackton1/django-check-constraint/commit/0812de1287372070b1a9578c84710cd2cf43ef59)).
+
+
+## [v1.0.16](https://github.com/jackton1/django-check-constraint/releases/tag/v1.0.16) ([compare](https://github.com/jackton1/django-check-constraint/compare/v1.0.15...v1.0.16)) - 2020-02-24
 
 ### Added
 - Added pre-commit hook. ([4a88d23](https://github.com/jackton1/django-check-constraint/commit/4a88d237377ed5c1a0c9b5a939fb4f549fd52646)).
 
 ### Misc
 - "2020-02-24 15:38 - Increased django-check-constraint version:VERSION = (1, 0, 15) to VERSION = (1, 0, 16)" ([18cc64c](https://github.com/jackton1/django-check-constraint/commit/18cc64cb5a7c2b4cc621b4068af145afd5fde914)).
+- Updated CHANGELOG.md. ([6136a7b](https://github.com/jackton1/django-check-constraint/commit/6136a7bc122245be03664bf562ec2466ec71a629)).
 - Updated the MANIFEST.in ([ab4ec80](https://github.com/jackton1/django-check-constraint/commit/ab4ec80400088ba4a012825be0799677b710df27)).
 - Updated the MANIFEST.in ([6236278](https://github.com/jackton1/django-check-constraint/commit/6236278efc7bc0744ed18cbd95d0ea6d34914629)).
 - Updated the MANIFEST.in ([ec81049](https://github.com/jackton1/django-check-constraint/commit/ec8104900a91f090da638e1f86da3cb76160dd1c)).
