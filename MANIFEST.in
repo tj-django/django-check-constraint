@@ -15,6 +15,7 @@ exclude Makefile
 exclude noxfile.py
 exclude demo
 exclude .github
+exclude check_constraint/test.py
 exclude .github/workflows/check_constraints.yml
 exclude .github/workflows/pythonpublish.yml
 exclude .github/workflows/release.yml
