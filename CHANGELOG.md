@@ -4,13 +4,20 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## [v1.1.0](https://github.com/jackton1/django-check-constraint/releases/tag/v1.1.0) ([compare](https://github.com/jackton1/django-check-constraint/compare/v1.0.13...v1.1.0))
+## [v1.0.15](https://github.com/jackton1/django-check-constraint/releases/tag/v1.0.15) ([compare](https://github.com/jackton1/django-check-constraint/compare/v1.0.14...v1.0.15))
+
+### Misc
+- "2020-02-24 15:24 - Increased django-check-constraint version:VERSION = (1, 0, 14) to VERSION = (1, 0, 15)" ([2d13e70](https://github.com/jackton1/django-check-constraint/commit/2d13e70c0324e08e7ea0248d7cd39ef02714b8ae)).
+
+
+## [v1.0.14](https://github.com/jackton1/django-check-constraint/releases/tag/v1.0.14) ([compare](https://github.com/jackton1/django-check-constraint/compare/v1.0.13...v1.0.14)) - 2020-02-24
 
 ### Added
 - Added MANIFEST.in ([d19ea85](https://github.com/jackton1/django-check-constraint/commit/d19ea854e24ead87487f4f7395ee2f58c60216ce)).
 
 ### Misc
 - "2020-02-24 15:23 - Increased django-check-constraint version:VERSION = (1, 0, 13) to VERSION = (1, 0, 14)" ([948eb4b](https://github.com/jackton1/django-check-constraint/commit/948eb4bccc6ad3e915c7f361142087c1fc25f3aa)).
+- Updated CHANGELOG.md. ([b2006dc](https://github.com/jackton1/django-check-constraint/commit/b2006dc368a3e1167cd75668ca109840f7a58c8c)).
 
 
 ## [v1.0.13](https://github.com/jackton1/django-check-constraint/releases/tag/v1.0.13) ([compare](https://github.com/jackton1/django-check-constraint/compare/v1.0.12...v1.0.13)) - 2020-02-24
