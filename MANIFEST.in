@@ -1,5 +1,6 @@
 recursive-include check_constraint *.py *.html
 recursive-exclude demo *
+recursive-exclude django_check_constraint *
 
 include *.md
 exclude *.png
