@@ -1,0 +1,22 @@
+recursive-include check_constraint *.py *.html
+recursive-exclude demo *
+
+include *.md
+exclude *.png
+exclude .envrc.example
+include *.py
+include *.txt
+include *.yaml
+exclude .bumpversion.cfg
+exclude .pre-commit-config.yaml
+exclude .coveragerc
+include LICENSE
+exclude Makefile
+exclude noxfile.py
+exclude demo
+exclude .github
+exclude .github/workflows/check_constraints.yml
+exclude .github/workflows/pythonpublish.yml
+exclude .github/workflows/release.yml
+exclude .github/FUNDING.yml
+exclude .pypirc
