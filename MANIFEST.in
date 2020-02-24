@@ -1,5 +1,6 @@
 recursive-include check_constraint *.py *.html
 recursive-exclude demo *
+recursive-exclude django_check_constraint *
 
 include *.md
 exclude *.png
@@ -15,6 +16,7 @@ exclude Makefile
 exclude noxfile.py
 exclude demo
 exclude .github
+exclude check_constraint/tests.py
 exclude .github/workflows/check_constraints.yml
 exclude .github/workflows/pythonpublish.yml
 exclude .github/workflows/release.yml
