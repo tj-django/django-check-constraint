@@ -4,7 +4,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## [v1.1.0](https://github.com/jackton1/django-check-constraint/releases/tag/v1.1.0) ([compare](https://github.com/jackton1/django-check-constraint/compare/v1.0.17...v1.1.0))
+## [v1.0.19](https://github.com/jackton1/django-check-constraint/releases/tag/v1.0.19) ([compare](https://github.com/jackton1/django-check-constraint/compare/v1.0.18...v1.0.19))
+
+
+## [v1.0.18](https://github.com/jackton1/django-check-constraint/releases/tag/v1.0.18) ([compare](https://github.com/jackton1/django-check-constraint/compare/v1.0.17...v1.0.18)) - 2020-02-27
 
 ### Added
 - Added support for generating the model name. ([583a397](https://github.com/jackton1/django-check-constraint/commit/583a3979992b5421741f755ae22530d2222ed990)).
@@ -14,6 +17,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Misc
 - "2020-02-27 13:54 - Increased django-check-constraint version:VERSION = (1, 0, 17) to VERSION = (1, 0, 18)" ([b3a3c50](https://github.com/jackton1/django-check-constraint/commit/b3a3c50889f8b378cc01195ad974af727d731da0)).
+- Updated CHANGELOG.md. ([8c537bd](https://github.com/jackton1/django-check-constraint/commit/8c537bd7b74b049dc31087f4de8512e276a49a1b)).
 
 
 ## [v1.0.17](https://github.com/jackton1/django-check-constraint/releases/tag/v1.0.17) ([compare](https://github.com/jackton1/django-check-constraint/compare/v1.0.16...v1.0.17)) - 2020-02-24
