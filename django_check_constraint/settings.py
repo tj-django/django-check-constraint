@@ -13,6 +13,8 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
+from django.db import DEFAULT_DB_ALIAS
+
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
@@ -80,8 +82,12 @@ DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.sqlite3",
         "NAME": os.path.join(BASE_DIR, "db.sqlite3"),
-        "TEST": {"DEPENDENCIES": TEST_ENV_DB},
-    }
+        "TEST": {
+            "DEPENDENCIES": [
+                d for d in os.environ["ENV_DB"].split(",") if d != DEFAULT_DB_ALIAS
+            ]
+        },
+    },
 }
 
 if "sqlite3" in TEST_ENV_DB:

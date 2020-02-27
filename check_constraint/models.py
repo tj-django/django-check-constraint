@@ -1,3 +1,5 @@
+import django
+from django.apps import apps
 from django.db import models
 
 from django.db.models.sql import Query
@@ -6,9 +8,20 @@ __all__ = ["AnnotatedCheckConstraint"]
 
 
 class AnnotatedCheckConstraint(models.CheckConstraint):
-    def __init__(self, *args, annotations=None, **kwargs):
+    def __init__(self, *args, model=None, annotations=None, **kwargs):
+        self._model = model
         self.annotations = annotations or {}
         super(AnnotatedCheckConstraint, self).__init__(*args, **kwargs)
+
+    @property
+    def model(self):
+        if self._model:
+            return apps.get_model(self._model)
+        return self._model
+
+    @model.setter
+    def model(self, new_model):
+        self._model = new_model
 
     def _get_check_sql(self, model, schema_editor):
         query = Query(model=model)
@@ -27,6 +40,14 @@ class AnnotatedCheckConstraint(models.CheckConstraint):
 
     def deconstruct(self):
         path, args, kwargs = super(models.CheckConstraint, self).deconstruct()
+
+        if (2, 0) <= django.VERSION <= (3, 0) and self.model:
+            # noinspection PyProtectedMember
+            kwargs["name"] = kwargs["name"] % {
+                "app_label": self.model._meta.app_label.lower(),
+                "class": self.model.__name__.lower(),
+            }
+
         kwargs["check"] = self.check
         kwargs["annotations"] = self.annotations
 
