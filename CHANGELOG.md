@@ -4,13 +4,26 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## [v1.0.17](https://github.com/jackton1/django-check-constraint/releases/tag/v1.0.17) ([compare](https://github.com/jackton1/django-check-constraint/compare/v1.0.16...v1.0.17))
+## [v1.1.0](https://github.com/jackton1/django-check-constraint/releases/tag/v1.1.0) ([compare](https://github.com/jackton1/django-check-constraint/compare/v1.0.17...v1.1.0))
+
+### Added
+- Added support for generating the model name. ([583a397](https://github.com/jackton1/django-check-constraint/commit/583a3979992b5421741f755ae22530d2222ed990)).
+
+### Fixed
+- Fixed lint errors. ([7dc7cc6](https://github.com/jackton1/django-check-constraint/commit/7dc7cc66cd5ed6d0ec6932ceddfd19d921a0866b)).
+
+### Misc
+- "2020-02-27 13:54 - Increased django-check-constraint version:VERSION = (1, 0, 17) to VERSION = (1, 0, 18)" ([b3a3c50](https://github.com/jackton1/django-check-constraint/commit/b3a3c50889f8b378cc01195ad974af727d731da0)).
+
+
+## [v1.0.17](https://github.com/jackton1/django-check-constraint/releases/tag/v1.0.17) ([compare](https://github.com/jackton1/django-check-constraint/compare/v1.0.16...v1.0.17)) - 2020-02-24
 
 ### Fixed
 - Fixed * imports. ([4e73372](https://github.com/jackton1/django-check-constraint/commit/4e73372c0ededfdf81e397e855e5e4b63785a471)).
 
 ### Misc
 - "2020-02-24 17:01 - Increased django-check-constraint version:VERSION = (1, 0, 16) to VERSION = (1, 0, 17)" ([0812de1](https://github.com/jackton1/django-check-constraint/commit/0812de1287372070b1a9578c84710cd2cf43ef59)).
+- Updated CHANGELOG.md. ([2a70f92](https://github.com/jackton1/django-check-constraint/commit/2a70f92fa8a875580dc5ddaa5d6423de64e76896)).
 
 
 ## [v1.0.16](https://github.com/jackton1/django-check-constraint/releases/tag/v1.0.16) ([compare](https://github.com/jackton1/django-check-constraint/compare/v1.0.15...v1.0.16)) - 2020-02-24
