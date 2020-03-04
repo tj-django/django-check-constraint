@@ -7,27 +7,14 @@
 | [Create New Release](https://github.com/jackton1/django-check-constraint/actions?query=workflow%3A%22Create+New+Release%22) | ![Create New Release](https://github.com/jackton1/django-check-constraint/workflows/Create%20New%20Release/badge.svg)      |
 
 
-|    PyPI                        |
-|:------------------------------:|
-|[![PyPI version](https://badge.fury.io/py/django-check-constraint.svg)](https://badge.fury.io/py/django-check-constraint) |
-
-| Python  | <!-- --> |
-|---------|:---------:|
-| Supported versions    | [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/django-check-constraint.svg)](https://pypi.org/project/django-check-constraint) |
-
-| Django | <!-- --> |
-|--------|:---------:|
-| Supported versions    | [![PyPI - Django Version](https://img.shields.io/pypi/djversions/django-check-constraint.svg)](https://docs.djangoproject.com/en/2.2/releases/)
-
-
-| [License](./LICENSE) |
-|----------------------|
-|[![PyPI - License](https://img.shields.io/pypi/l/django-check-constraint.svg)](https://github.com/jackton1/django-check-constraint/blob/master/LICENSE) |
+|    PyPI                        |  Python   | Django  | [LICENSE](./LICENSE) |
+|:------------------------------:|:---------:|:-------:|:--------------------:|
+|[![PyPI version](https://badge.fury.io/py/django-check-constraint.svg)](https://badge.fury.io/py/django-check-constraint) | [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/django-check-constraint.svg)](https://pypi.org/project/django-check-constraint) | [![PyPI - Django Version](https://img.shields.io/pypi/djversions/django-check-constraint.svg)](https://docs.djangoproject.com/en/2.2/releases/) | [![PyPI - License](https://img.shields.io/pypi/l/django-check-constraint.svg)](https://github.com/jackton1/django-check-constraint/blob/master/LICENSE) |
 
 
 
-Extends [Django's Check](https://docs.djangoproject.com/en/3.0/ref/models/options/#constraints)
-constraint with support for UDF(User defined functions/db functions) and annotations.
+Extends [Django's Check constraint](https://docs.djangoproject.com/en/3.0/ref/models/options/#constraints)
+with support for UDF(User defined functions/db functions) and annotations.
 
 
 #### Installation
