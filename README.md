@@ -122,7 +122,8 @@ class TestModel(models.Model):
                         )
                     ),
                 },
-                name='%(app_label)s_%(class)s_optional_field_provided',
+                name='%(app_label)s_%(class)s_optional_field_provided', #  For Django>=3.0
+                model='myapp.TestModel', #  To take advantage of name subsitution above add app_name.Model for Django<3.0.  
             ),
         ]
 
