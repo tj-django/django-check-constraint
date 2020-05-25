@@ -84,7 +84,7 @@ DATABASES = {
         "NAME": os.path.join(BASE_DIR, "db.sqlite3"),
         "TEST": {
             "DEPENDENCIES": [
-                d for d in os.environ["ENV_DB"].split(",") if d != DEFAULT_DB_ALIAS
+                d for d in TEST_ENV_DB if d != DEFAULT_DB_ALIAS
             ]
         },
     },
