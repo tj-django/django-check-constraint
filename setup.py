@@ -9,7 +9,7 @@ test_requires = [
     "nox==2019.11.9",
     "pluggy>=0.7",
     "mock==2.0.0",
-    "unittest-xml-reporting==2.5.2",
+    "unittest-xml-reporting==3.0.2",
     "codacy-coverage==1.3.11",
 ]
 
