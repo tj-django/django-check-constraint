@@ -1,5 +1,5 @@
 
-CheckConstraint now accepts any boolean expression since [Django 3.1+](https://docs.djangoproject.com/en/3.1/ref/models/constraints/#check) so this particular one can be expressed using RawSQL.
+CheckConstraint now accepts any boolean expression since [Django 3.1+](https://docs.djangoproject.com/en/3.1/ref/models/constraints/#check) so this can now be expressed using RawSQL.
 
 ```python
 CheckConstraint(
