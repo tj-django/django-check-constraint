@@ -8,7 +8,7 @@ install_requires = ["Django>=2.2.10"]
 test_requires = [
     "nox==2019.11.9",
     "pluggy>=0.7",
-    "mock==2.0.0",
+    "mock==4.0.2",
     "unittest-xml-reporting==2.5.2",
     "codacy-coverage==1.3.11",
 ]
