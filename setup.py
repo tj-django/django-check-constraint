@@ -6,7 +6,7 @@ from setuptools import find_packages, setup
 install_requires = ["Django>=2.2.10"]
 
 test_requires = [
-    "nox==2019.11.9",
+    "nox==2020.5.24",
     "pluggy>=0.7",
     "mock==2.0.0",
     "unittest-xml-reporting==2.5.2",
