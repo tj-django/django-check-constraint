@@ -14,7 +14,18 @@ CheckConstraint(
 Or event Func, Cast, and Exact.
 
 ```python
-non_null_count = Func(Cast('amount', models.IntegerField()), Cast('amount_off', models.IntegerField()), Cast('percentage', models.IntegerField()), function='non_null_count')
+non_null_count = Func(
+  Cast(
+    'amount', models.IntegerField(),
+  ),
+  Cast(
+    'amount_off', models.IntegerField(),
+  ), 
+  Cast(
+    'percentage', models.IntegerField(),
+  ), 
+  function='non_null_count',
+)
 
 CheckConstraint(
     check=Exact(non_null_count, 1),
