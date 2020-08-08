@@ -1,3 +1,32 @@
+
+CheckConstraint now accepts any boolean expression since [Django 3.1+](https://docs.djangoproject.com/en/3.1/ref/models/constraints/#check) so this particular one can be expressed using RawSQL.
+
+```python
+CheckConstraint(
+    check=RawSQL(
+        'non_null_count(amount::integer , amount_off::integer, percentage::integer) = 1',
+        output_field=models.BooleanField(),
+     )
+)
+```
+
+
+Or event Func, Cast, and Exact.
+
+```python
+non_null_count = Func(Cast('amount', models.IntegerField()), Cast('amount_off', models.IntegerField()), Cast('percentage', models.IntegerField()), function='non_null_count')
+
+CheckConstraint(
+    check=Exact(non_null_count, 1),
+)
+```
+
+
+
+
+----
+
+
 |    PyPI                        |  Python   | Django  | [LICENSE](./LICENSE) |
 |:------------------------------:|:---------:|:-------:|:--------------------:|
 |[![PyPI version](https://badge.fury.io/py/django-check-constraint.svg)](https://badge.fury.io/py/django-check-constraint) | [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/django-check-constraint.svg)](https://pypi.org/project/django-check-constraint) | [![PyPI - Django Version](https://img.shields.io/pypi/djversions/django-check-constraint.svg)](https://docs.djangoproject.com/en/2.2/releases/) | [![PyPI - License](https://img.shields.io/pypi/l/django-check-constraint.svg)](https://github.com/jackton1/django-check-constraint/blob/master/LICENSE) |
